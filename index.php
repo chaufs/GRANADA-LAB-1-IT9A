@@ -11,6 +11,7 @@ $revenue = $revRow['s'];
 <!doctype html>
 <html>
 <head>
+  <link rel="stylesheet" href="style.css?v=2">
   <meta charset="utf-8">
   <title>Dashboard</title>
 
@@ -125,8 +126,9 @@ $revenue = $revRow['s'];
   </div>
 
   <div class="links">
-    <a href="/assessment_beginner/pages/clients_add.php" class="btn btn-primary">+ Add Client</a>
-    <a href="/assessment_beginner/pages/bookings_create.php" class="btn btn-secondary">+ Create Booking</a>
+    <a href="/assessment/pages/clients_add.php" class="btn btn-primary">+ Add Client</a>
+    <a href="/assessment/pages/services_list.php" class="btn btn-secondary">Services</a>
+    <a href="/assessment/pages/bookings_create.php" class="btn btn-secondary">+ Create Booking</a>
   </div>
 </div>
 

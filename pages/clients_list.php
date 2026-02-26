@@ -7,14 +7,27 @@ $result = mysqli_query($conn, "SELECT * FROM clients ORDER BY client_id DESC");
 <head>
   <meta charset="utf-8">
   <title>Clients</title>
-  <link rel="stylesheet" href="../style.css?v=2">
+  <style>
+    :root { --primary: #154C51; --primary-hover: #0f3b3f; --surface: #ffffff; --background: #f4f6f9; --text-main: #333333; --text-muted: #666666; --border-color: #dddddd; }
+    body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--background); color: var(--text-main); }
+    .container { padding: 30px; max-width: 1100px; margin: auto; }
+    .page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .page-header h2 { margin: 0; }
+    .table-container { background: var(--surface); padding: 20px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th { text-align: left; background-color: #f8f9fa; padding: 15px; border-bottom: 2px solid var(--border-color); color: var(--text-muted); font-size: 14px; }
+    td { padding: 15px; border-bottom: 1px solid var(--border-color); font-size: 15px; }
+    tr:hover { background-color: #fcfcfc; }
+    .btn-add { background-color: var(--primary); color: white; padding: 10px 20px; border: none; border-radius: 6px; text-decoration: none; cursor: pointer; display: inline-block; font-weight: 500; font-size: 14px; }
+    .btn-add:hover { background-color: var(--primary-hover); }
+    .action-link { color: var(--primary); text-decoration: none; font-weight: 600; }
+  </style>
 </head>
 <body>
 
 <?php include "../nav.php"; ?>
 
 <div class="container">
-  
   <div class="page-header">
     <h2>Clients</h2>
     <a href="clients_add.php" class="btn-add">+ Add Client</a>
@@ -42,7 +55,6 @@ $result = mysqli_query($conn, "SELECT * FROM clients ORDER BY client_id DESC");
       <?php } ?>
     </table>
   </div>
-
 </div>
 
 </body>

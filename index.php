@@ -1,3 +1,14 @@
+ 
+<?php
+session_start();
+ 
+// If not logged in, redirect to login
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}?>
+
+
 <?php 
 include "db.php";
 
@@ -33,7 +44,7 @@ $revenue = $revRow['s'];
 <body>
 
 <?php include "nav.php"; ?>
-
+<h2 style = "margin-bottom: 25px; text-align: center;">Welcome, <?php echo $_SESSION['username']; ?>!</h2>
 <div class="container">
   <h2>Dashboard Overview</h2>
 

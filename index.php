@@ -11,89 +11,23 @@ $revenue = $revRow['s'];
 <!doctype html>
 <html>
 <head>
-  <link rel="stylesheet" href="style.css?v=2">
   <meta charset="utf-8">
   <title>Dashboard</title>
-
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f6f9;
-    }
-
-    .container {
-      padding: 30px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    h2 {
-      margin-bottom: 25px;
-      color: #333;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-bottom: 30px;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      
-    }
-
-    
-
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 15px;
-      color: #666;
-      font-weight: 500;
-    }
-
-    .card .value {
-      font-size: 28px;
-      font-weight: bold;
-      color: #154C51;
-    }
-
-    .links {
-      margin-top: 20px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 18px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 500;
-      margin-right: 10px;
-      transition: 0.2s;
-    }
-
-    .btn-primary {
-      background: #154C51;
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background: #0f3b3f;
-    }
-
-    .btn-secondary {
-      background: #e4e6eb;
-      color: #333;
-    }
-
-    .btn-secondary:hover {
-      background: #d0d3d8;
-    }
-
+    :root { --primary: #154C51; --primary-hover: #0f3b3f; --surface: #ffffff; --background: #f4f6f9; --text-main: #333333; --text-muted: #666666; }
+    body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--background); color: var(--text-main); }
+    .container { padding: 30px; max-width: 1100px; margin: auto; }
+    h2 { margin-bottom: 25px; color: #333; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 30px; }
+    .card { background: var(--surface); padding: 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .card h3 { margin: 0 0 10px; font-size: 15px; color: var(--text-muted); font-weight: 500; }
+    .card .value { font-size: 28px; font-weight: bold; color: var(--primary); }
+    .links { margin-top: 20px; }
+    .btn { display: inline-block; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 500; margin-right: 10px; transition: 0.2s; font-size: 15px; }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-secondary { background: #e4e6eb; color: #333; }
+    .btn-secondary:hover { background: #d0d3d8; }
   </style>
 </head>
 <body>
